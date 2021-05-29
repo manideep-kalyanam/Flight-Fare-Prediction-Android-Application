@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ba2"
+    tools:context=".MainScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+            <TextView
+                android:id="@+id/textViewHead"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp"
+                android:text="Provide your Journey details"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"/>
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="150dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/textViewHead"
+                android:layout_alignLeft="@+id/textViewHead"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="45dp"
+                android:dropDownWidth="150dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="38dp"
+                tools:layout_editor_absoluteY="98dp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="150dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/textViewHead"
+                android:layout_marginTop="35dp"
+                android:layout_toRightOf="@+id/spinner1"
+                android:dropDownWidth="150dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="98dp" />
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="118dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/spinner1"
+                android:layout_alignLeft="@+id/spinner1"
+                android:layout_marginTop="30dp"
+                android:text="Date of journey"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="38dp"
+                tools:layout_editor_absoluteY="173dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDate"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/spinner1"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@+id/textViewDate"
+                android:onClick="date"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cal3"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="143dp"
+                tools:layout_editor_absoluteY="163dp" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="150dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/spinner2"
+                android:layout_alignLeft="@+id/spinner2"
+                android:layout_marginTop="30dp"
+                android:dropDownWidth="150dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="173dp" />
+
+            <TextView
+                android:id="@+id/textViewDep"
+                android:layout_width="118dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/textViewDate"
+                android:layout_alignLeft="@+id/textViewDate"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="Departure time"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="38dp"
+                tools:layout_editor_absoluteY="238dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonDep"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/imageButtonDate"
+                android:layout_marginTop="26dp"
+                android:layout_toRightOf="@+id/textViewDep"
+                android:onClick="Departure"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cal3"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="145dp"
+                tools:layout_editor_absoluteY="229dp" />
+
+            <TextView
+                android:id="@+id/textViewArr"
+                android:layout_width="118dp"
+                android:layout_height="28dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_alignLeft="@+id/spinner3"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Arrival time"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="238dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonArr"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/spinner3"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@+id/textViewArr"
+                android:onClick="Arrival"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cal3"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="329dp"
+                tools:layout_editor_absoluteY="229dp" />
+
+            <Button
+                android:id="@+id/show"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/textViewDep"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+                android:onClick="show"
+                android:text="Predict"
+                app:backgroundTint="#2962FF" />
+
+            <ImageView
+                android:id="@+id/imAirAsia"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/show"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/airasia"/>
+            <TextView
+                android:id="@+id/textAirAsia"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/show"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="30dp"
+                android:text="Air Asia"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imAirIndia"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imAirAsia"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/airind"/>
+            <TextView
+                android:id="@+id/textAirIndia"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textAirAsia"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Air India"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imGoAir"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imAirIndia"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/goair"/>
+            <TextView
+                android:id="@+id/textGoAir"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textAirIndia"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Go Air"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imIndigo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imGoAir"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/indigo"/>
+            <TextView
+                android:id="@+id/textIndigo"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textGoAir"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="IndiGo"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imJet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imIndigo"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/jet"/>
+            <TextView
+                android:id="@+id/textJet"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textIndigo"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Jet Airways"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imJetB"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imJet"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/jetbusiness"/>
+            <TextView
+                android:id="@+id/textJetB"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textJet"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Jet Airways Business"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imMulti"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imJetB"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/mc"/>
+            <TextView
+                android:id="@+id/textMulti"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textJetB"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Multiple carriers"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imMultiPrem"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imMulti"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/mcpremium"/>
+            <TextView
+                android:id="@+id/textMultiPrem"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textMulti"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Multiple carriers Premium economy"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imSpice"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imMultiPrem"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/spicejet"/>
+            <TextView
+                android:id="@+id/textSpice"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textMultiPrem"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="SpiceJet"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imTrujet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imSpice"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/trujet"/>
+            <TextView
+                android:id="@+id/textTrujet"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textSpice"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Trujet"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imVistara"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/imTrujet"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/vistara"/>
+            <TextView
+                android:id="@+id/textVistara"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textTrujet"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:text="Vistara"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imVistaraPrem"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:layout_below="@+id/imVistara"
+                android:layout_alignLeft="@+id/textViewHead"
+                app:srcCompat="@drawable/vistarapremium"/>
+            <TextView
+                android:id="@+id/textVistaraPrem"
+                android:layout_width="275dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/textVistara"
+                android:layout_alignRight="@+id/textViewHead"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:text="Vistara Premium economy"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
