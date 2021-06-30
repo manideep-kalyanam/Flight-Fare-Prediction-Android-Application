@@ -1,5 +1,5 @@
-# Flight Fare Prediction Application
-Flight Fare Prediction Application is an android application based on Machine learning. This android application predicts flight fares for various airlines in India for given journey details like Source, destination, date of journey, departure and arrival time.
+# Flight Fare Prediction Android Application
+Flight Fare Prediction Android application is based on Machine learning. This android application predicts flight fares for various airlines in India for given journey details like Source, destination, date of journey, departure and arrival time.
 # Demo
 <img width="270" height="570" src="https://user-images.githubusercontent.com/67269818/123952008-0a531800-d9c3-11eb-87a4-4cc120ea8ad4.gif">
 
